@@ -17,11 +17,39 @@ namespace burgershop.Services
     {
       return FakeDB.Burgers;
     }
-    // GetByID
+    // Get By ID
+
+    public Burger getBurgerById(string id)
+    {
+      Burger burgerToGet = FakeDB.Burgers.Find(b => b.Id == id);
+      if (burgerToGet == null)
+      {
+        throw new Exception("Invalid Id");
+      }
+      return burgerToGet;
+    }
 
     // Create
 
+    public Burger createBurger(Burger newBurger)
+    {
+      FakeDB.Burgers.Add(newBurger);
+      return newBurger;
+    }
+
     // Edit
+
+    public Burger editBurger(Burger updatedBurger)
+    {
+      Burger burgerToUpdate = FakeDB.Burgers.Find(b => b.Id == updatedBurger.Id);
+      if (burgerToUpdate == null)
+      {
+        throw new Exception("Invalid Id");
+      }
+      FakeDB.Burgers.Remove(burgerToUpdate);
+      FakeDB.Burgers.Add(updatedBurger);
+      return updatedBurger;
+    }
 
     // Delete
 
