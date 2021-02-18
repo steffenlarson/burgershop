@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ri7i8gDwztR8bcjt7bTQs2Ca5n3QgNJOfgeXVhVbMp5JjZbdvWSfNJM8QfTKjaJtKK9OZc1BXr6rgLSDMxmX8w==",
+  "dgSpecHash": "me8Vsd3Zk7C8iXa15gsDXw5qZ7p+sKCN9GWuYvLyeh/9KXBKkYwzMyTSe0hmB9rJldXPI2c6BnaWrka27IsM4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\steff\\source\\codeworks\\afternoonchallenges\\burgershop\\burgershop.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\steff\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\steff\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\steff\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\steff\\.nuget\\packages\\mysqlconnector\\1.2.1\\mysqlconnector.1.2.1.nupkg.sha512",
     "C:\\Users\\steff\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\steff\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\steff\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",

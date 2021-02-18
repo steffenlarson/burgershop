@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using burgershop.Services;
+using MySqlConnector;
+using System.Data;
 
 namespace burgershop
 {
@@ -31,13 +33,26 @@ namespace burgershop
 
       services.AddTransient<BurgersService>();
 
+      services.AddTransient<BurgersRepository>();
+
 
       services.AddControllers();
+
+      services.AddScoped<IDbConnection>(x => CreateDbConnection());
+
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "burgershop", Version = "v1" });
       });
     }
+
+
+    private IDbConnection CreateDbConnection()
+    {
+      string connectString = Configuration["db:gearhost"];
+      return new MySqlConnection(connectString);
+    }
+
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -60,5 +75,7 @@ namespace burgershop
         endpoints.MapControllers();
       });
     }
+
+
   }
 }
