@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using burgershop.db;
+// using burgershop.db;
 using burgershop.Models;
 using burgershop.Repositories;
 
@@ -29,37 +29,35 @@ namespace burgershop.Services
     }
     // Get By ID
 
-    // public Burger getBurgerById(string id)
-    // {
-    //   Burger burgerToGet = FakeDB.Burgers.Find(b => b.Id == id);
-    //   if (burgerToGet == null)
-    //   {
-    //     throw new Exception("Invalid Id");
-    //   }
-    //   return burgerToGet;
-    // }
+    internal Burger getBurgerById(int id)
+    {
+      Burger burgerToGet = _repo.getById(id);
+      if (burgerToGet == null)
+      {
+        throw new Exception("Invalid Id");
+      }
+      return burgerToGet;
+    }
 
     // // Create
 
-    // public Burger createBurger(Burger newBurger)
-    // {
-    //   FakeDB.Burgers.Add(newBurger);
-    //   return newBurger;
-    // }
+    internal Burger createBurger(Burger newBurger)
+    {
+      return _repo.Create(newBurger);
+    }
 
     // // Edit
 
-    // public Burger editBurger(Burger updatedBurger)
-    // {
-    //   Burger burgerToUpdate = FakeDB.Burgers.Find(b => b.Id == updatedBurger.Id);
-    //   if (burgerToUpdate == null)
-    //   {
-    //     throw new Exception("Invalid Id");
-    //   }
-    //   FakeDB.Burgers.Remove(burgerToUpdate);
-    //   FakeDB.Burgers.Add(updatedBurger);
-    //   return updatedBurger;
-    // }
+    internal Burger editBurger(Burger updatedBurger)
+    {
+      Burger original = getBurgerById(updatedBurger.Id);
+
+      original.Name = updatedBurger.Name != null ? updatedBurger.Name : original.Name;
+      original.Description = updatedBurger.Description != null ? updatedBurger.Description : original.Description;
+      original.Price = updatedBurger.Price > 0 ? updatedBurger.Price : original.Price;
+
+      return _repo.editBurger(original);
+    }
 
     // // Delete
 
