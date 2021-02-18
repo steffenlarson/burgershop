@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using burgershop.db;
 using burgershop.Models;
+using burgershop.Repositories;
 
 
 namespace burgershop.Services
@@ -10,12 +11,21 @@ namespace burgershop.Services
   {
 
 
+    private readonly BurgersRepository _repo;
+
+    public BurgersService(BurgersRepository repo)
+    {
+      _repo = repo;
+    }
+
+
+
 
     // Get All
 
-    public IEnumerable<Burger> getAllBurgers()
+    internal IEnumerable<Burger> getAllBurgers()
     {
-      return FakeDB.Burgers;
+      return _repo.getAll();
     }
     // Get By ID
 
