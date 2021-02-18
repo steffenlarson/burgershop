@@ -40,73 +40,73 @@ namespace burgershop.Controllers
       }
     }
 
-    // Get By Id
-    [HttpGet("{burgerId}")]
-    public ActionResult<Burger> getBurgerById(string burgerId)
-    {
-      try
-      {
-        Burger burgerToGet = _bs.getBurgerById(burgerId);
-        return Ok(burgerToGet);
-      }
-      catch (Exception e)
-      {
+    // // Get By Id
+    // [HttpGet("{burgerId}")]
+    // public ActionResult<Burger> getBurgerById(string burgerId)
+    // {
+    //   try
+    //   {
+    //     Burger burgerToGet = _bs.getBurgerById(burgerId);
+    //     return Ok(burgerToGet);
+    //   }
+    //   catch (Exception e)
+    //   {
 
-        return BadRequest(e.Message);
-      }
-    }
-    // Post
+    //     return BadRequest(e.Message);
+    //   }
+    // }
+    // // Post
 
-    [HttpPost]
-    public ActionResult<Burger> Create([FromBody] Burger newBurger)
-    {
-      try
-      {
-        Burger burgerToMake = _bs.createBurger(newBurger);
-        return Ok(burgerToMake);
-      }
-      catch (Exception e)
-      {
+    // [HttpPost]
+    // public ActionResult<Burger> Create([FromBody] Burger newBurger)
+    // {
+    //   try
+    //   {
+    //     Burger burgerToMake = _bs.createBurger(newBurger);
+    //     return Ok(burgerToMake);
+    //   }
+    //   catch (Exception e)
+    //   {
 
-        return BadRequest(e.Message);
-      }
-    }
+    //     return BadRequest(e.Message);
+    //   }
+    // }
 
 
-    // Put
+    // // Put
 
-    [HttpPut("{burgerId}")]
-    public ActionResult<Burger> editBurger([FromBody] Burger updatedBurger, string burgerId)
-    {
-      try
-      {
-        updatedBurger.Id = burgerId;
-        Burger burgerToEdit = _bs.editBurger(updatedBurger);
-        return Ok(burgerToEdit);
-      }
-      catch (Exception e)
-      {
+    // [HttpPut("{burgerId}")]
+    // public ActionResult<Burger> editBurger([FromBody] Burger updatedBurger, string burgerId)
+    // {
+    //   try
+    //   {
+    //     updatedBurger.Id = burgerId;
+    //     Burger burgerToEdit = _bs.editBurger(updatedBurger);
+    //     return Ok(burgerToEdit);
+    //   }
+    //   catch (Exception e)
+    //   {
 
-        return BadRequest(e.Message);
-      }
-    }
+    //     return BadRequest(e.Message);
+    //   }
+    // }
 
-    // Delete
+    // // Delete
 
-    [HttpDelete("{burgerId}")]
-    public ActionResult<String> deleteBurger(string burgerId)
-    {
-      try
-      {
-        _bs.deleteBurger(burgerId);
-        return Ok("Burger Posting Successfully Delorted");
-      }
-      catch (Exception e)
-      {
+    // [HttpDelete("{burgerId}")]
+    // public ActionResult<String> deleteBurger(string burgerId)
+    // {
+    //   try
+    //   {
+    //     _bs.deleteBurger(burgerId);
+    //     return Ok("Burger Posting Successfully Delorted");
+    //   }
+    //   catch (Exception e)
+    //   {
 
-        return BadRequest(e.Message);
-      }
-    }
+    //     return BadRequest(e.Message);
+    //   }
+    // }
 
 
   }

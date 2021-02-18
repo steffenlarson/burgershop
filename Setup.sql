@@ -1,22 +1,22 @@
 USE codeworkscourse;
 
--- CREATE TABLE burgers
--- (
---   id INT AUTO_INCREMENT,
---   name VARCHAR(255) NOT NULL UNIQUE,
---   description VARCHAR(255),
---   price DECIMAL(6 , 2) NOT NULL,
+CREATE TABLE burgers
+(
+  id INT AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL UNIQUE,
+  description VARCHAR(255),
+  price DECIMAL(6 , 2) NOT NULL,
 
---   PRIMARY KEY (id)
--- );
+  PRIMARY KEY (id)
+);
 
 -- DECIMAL( NUMS , NUMSPASTDEC)
 
 -- CREATE
--- INSERT INTO burgers
--- (name, description, price)
--- VALUES
--- ("Santa Burger", "Its from very fatty", 201.21);
+INSERT INTO burgers
+(name, description, price)
+VALUES
+("Santa Burger", "Its from very fatty", 201.21);
 
 
 /* Find All of Collection */

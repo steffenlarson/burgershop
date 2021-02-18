@@ -29,50 +29,50 @@ namespace burgershop.Services
     }
     // Get By ID
 
-    public Burger getBurgerById(string id)
-    {
-      Burger burgerToGet = FakeDB.Burgers.Find(b => b.Id == id);
-      if (burgerToGet == null)
-      {
-        throw new Exception("Invalid Id");
-      }
-      return burgerToGet;
-    }
+    // public Burger getBurgerById(string id)
+    // {
+    //   Burger burgerToGet = FakeDB.Burgers.Find(b => b.Id == id);
+    //   if (burgerToGet == null)
+    //   {
+    //     throw new Exception("Invalid Id");
+    //   }
+    //   return burgerToGet;
+    // }
 
-    // Create
+    // // Create
 
-    public Burger createBurger(Burger newBurger)
-    {
-      FakeDB.Burgers.Add(newBurger);
-      return newBurger;
-    }
+    // public Burger createBurger(Burger newBurger)
+    // {
+    //   FakeDB.Burgers.Add(newBurger);
+    //   return newBurger;
+    // }
 
-    // Edit
+    // // Edit
 
-    public Burger editBurger(Burger updatedBurger)
-    {
-      Burger burgerToUpdate = FakeDB.Burgers.Find(b => b.Id == updatedBurger.Id);
-      if (burgerToUpdate == null)
-      {
-        throw new Exception("Invalid Id");
-      }
-      FakeDB.Burgers.Remove(burgerToUpdate);
-      FakeDB.Burgers.Add(updatedBurger);
-      return updatedBurger;
-    }
+    // public Burger editBurger(Burger updatedBurger)
+    // {
+    //   Burger burgerToUpdate = FakeDB.Burgers.Find(b => b.Id == updatedBurger.Id);
+    //   if (burgerToUpdate == null)
+    //   {
+    //     throw new Exception("Invalid Id");
+    //   }
+    //   FakeDB.Burgers.Remove(burgerToUpdate);
+    //   FakeDB.Burgers.Add(updatedBurger);
+    //   return updatedBurger;
+    // }
 
-    // Delete
+    // // Delete
 
-    public string deleteBurger(string burgerId)
-    {
-      Burger burgerToDelete = FakeDB.Burgers.Find(b => b.Id == burgerId);
-      if (burgerToDelete == null)
-      {
-        throw new Exception("Invalid Id");
-      }
-      FakeDB.Burgers.Remove(burgerToDelete);
-      return "Burger Menu Item Successfully Delorted";
-    }
+    // public string deleteBurger(string burgerId)
+    // {
+    //   Burger burgerToDelete = FakeDB.Burgers.Find(b => b.Id == burgerId);
+    //   if (burgerToDelete == null)
+    //   {
+    //     throw new Exception("Invalid Id");
+    //   }
+    //   FakeDB.Burgers.Remove(burgerToDelete);
+    //   return "Burger Menu Item Successfully Delorted";
+    // }
 
   }
 }

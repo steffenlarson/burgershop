@@ -13,7 +13,7 @@ namespace burgershop.Models
     // public array Toppings { get; set; }
 
 
-    public string Id { get; set; } = Guid.NewGuid().ToString();
+    public int Id { get; set; }
 
 
   }

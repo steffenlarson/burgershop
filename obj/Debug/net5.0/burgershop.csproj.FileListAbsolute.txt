@@ -27,3 +27,5 @@ C:\Users\steff\source\codeworks\afternoonchallenges\burgershop\obj\Debug\net5.0\
 C:\Users\steff\source\codeworks\afternoonchallenges\burgershop\obj\Debug\net5.0\ref\burgershop.dll
 C:\Users\steff\source\codeworks\afternoonchallenges\burgershop\obj\Debug\net5.0\burgershop.pdb
 C:\Users\steff\source\codeworks\afternoonchallenges\burgershop\obj\Debug\net5.0\burgershop.genruntimeconfig.cache
+C:\Users\steff\source\codeworks\afternoonchallenges\burgershop\bin\Debug\net5.0\Dapper.dll
+C:\Users\steff\source\codeworks\afternoonchallenges\burgershop\bin\Debug\net5.0\MySqlConnector.dll
