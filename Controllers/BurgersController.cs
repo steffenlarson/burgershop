@@ -93,8 +93,24 @@ namespace burgershop.Controllers
 
     // Delete
 
+    [HttpDelete("{burgerId}")]
+    public ActionResult<String> deleteBurger(string burgerId)
+    {
+      try
+      {
+        _bs.deleteBurger(burgerId);
+        return Ok("Burger Posting Successfully Delorted");
+      }
+      catch (Exception e)
+      {
 
+        return BadRequest(e.Message);
+      }
+    }
 
 
   }
 }
+
+
+// I LOVE YOU KYRSTEN :)

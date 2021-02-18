@@ -53,7 +53,16 @@ namespace burgershop.Services
 
     // Delete
 
-
+    public string deleteBurger(string burgerId)
+    {
+      Burger burgerToDelete = FakeDB.Burgers.Find(b => b.Id == burgerId);
+      if (burgerToDelete == null)
+      {
+        throw new Exception("Invalid Id");
+      }
+      FakeDB.Burgers.Remove(burgerToDelete);
+      return "Burger Posting Successfully Delorted";
+    }
 
   }
 }
