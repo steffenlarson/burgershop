@@ -67,7 +67,11 @@ namespace burgershop.Repositories
 
 
     // Delete
-
+    internal void deleteBurger(Burger burger)
+    {
+      string sql = "DELETE FROM burgers WHERE id =@Id";
+      _db.Execute(sql, burger);
+    }
 
 
   }

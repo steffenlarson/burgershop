@@ -61,16 +61,12 @@ namespace burgershop.Services
 
     // // Delete
 
-    // public string deleteBurger(string burgerId)
-    // {
-    //   Burger burgerToDelete = FakeDB.Burgers.Find(b => b.Id == burgerId);
-    //   if (burgerToDelete == null)
-    //   {
-    //     throw new Exception("Invalid Id");
-    //   }
-    //   FakeDB.Burgers.Remove(burgerToDelete);
-    //   return "Burger Menu Item Successfully Delorted";
-    // }
+    internal String deleteBurger(int burgerId)
+    {
+      Burger burgerToDelete = getBurgerById(burgerId);
+      _repo.deleteBurger(burgerToDelete);
+      return "Burger Menu Item Successfully Delorted";
+    }
 
   }
 }

@@ -93,20 +93,20 @@ namespace burgershop.Controllers
 
     // // Delete
 
-    // [HttpDelete("{burgerId}")]
-    // public ActionResult<String> deleteBurger(string burgerId)
-    // {
-    //   try
-    //   {
-    //     _bs.deleteBurger(burgerId);
-    //     return Ok("Burger Posting Successfully Delorted");
-    //   }
-    //   catch (Exception e)
-    //   {
+    [HttpDelete("{burgerId}")]
+    public ActionResult<String> deleteBurger(int burgerId)
+    {
+      try
+      {
+        _bs.deleteBurger(burgerId);
+        return Ok("Burger Posting Successfully Delorted");
+      }
+      catch (Exception e)
+      {
 
-    //     return BadRequest(e.Message);
-    //   }
-    // }
+        return BadRequest(e.Message);
+      }
+    }
 
 
   }
