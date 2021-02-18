@@ -61,7 +61,7 @@ namespace burgershop.Services
         throw new Exception("Invalid Id");
       }
       FakeDB.Burgers.Remove(burgerToDelete);
-      return "Burger Posting Successfully Delorted";
+      return "Burger Menu Item Successfully Delorted";
     }
 
   }
