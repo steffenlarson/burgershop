@@ -52,7 +52,7 @@ namespace burgershop.Repositories
 
 
     // Edit
-    // NOTE Make sure that in the set you list everything that you want the user to edit. If you do not want them to edit it, leave it out.
+    // NOTE Make sure that in the set you list everything that you want the user to edit. If you do not want them to edit it, leave it out.   
     internal Burger editBurger(Burger original)
     {
       string sql = @"
